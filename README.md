@@ -68,15 +68,14 @@ CREATE    Cria bancos, tabelas e outros objetos
 ALTER    Altera a estrutura de uma tabela já existente
 DROP    Exclui bancos ou tabelas
 TRUNCATE    Apaga rapidamente todos os registros de uma tabela
+
 🏗️ Exemplos DDL utilizados no projeto SweetStore
+
 1️⃣ Criando o banco de dados (CREATE DATABASE)
 CREATE DATABASE SweetStore;
 USE SweetStore;
 
-
 Esse comando cria o banco onde todas as tabelas e dados serão armazenados.
-
----
 
 2️⃣ Criando tabelas (CREATE TABLE)
 Exemplo: Tabela Categorias
@@ -84,7 +83,6 @@ CREATE TABLE Categorias (
     CategoriaID INT AUTO_INCREMENT PRIMARY KEY,
     NomeCategoria VARCHAR(100) NOT NULL
 );
-
 
 Esse comando cria uma tabela para armazenar os tipos de doces vendidos.
 
@@ -102,8 +100,6 @@ CREATE TABLE Produtos (
 
 Aqui vemos o FOREIGN KEY, que liga produtos à categoria correspondente.
 
----
-
 3️⃣ Alterando uma tabela (ALTER TABLE)
 
 (Exemplo didático — não está no script original)
@@ -113,8 +109,6 @@ ADD Peso VARCHAR(20);
 
 
 Esse comando adicionaria uma nova coluna chamada "Peso" na tabela Produtos.
-
----
 
 4️⃣ Excluindo uma tabela (DROP TABLE)
 
@@ -166,7 +160,6 @@ Esse comando altera o preço do produto com ID 1.
 DELETE FROM Produtos
 WHERE ProdutoID = 2;
 
-
 Remove o produto de ID 2 da tabela.
 
 4️⃣ Consultando dados (SELECT)
@@ -176,10 +169,7 @@ Remove o produto de ID 2 da tabela.
 SELECT Nome, Preco
 FROM Produtos;
 
-
 Esse comando lista o nome e o preço de todos os produtos cadastrados.
-
----
 
 🎓 Resumo Final
 
@@ -190,5 +180,3 @@ DML manipula os dados que estão dentro dessa estrutura.
 No projeto SweetStore, usamos CREATE TABLE, INSERT, FOREIGN KEY, entre outros.
 
 Saber ambos é essencial para construir bancos de dados profissionais
-
----
