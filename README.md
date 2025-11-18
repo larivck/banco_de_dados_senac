@@ -56,37 +56,30 @@ Este projeto foi desenvolvido como parte da disciplina de Banco de Dados, com fo
 
 ---
 
-📚 Conteúdo Educacional – Comandos DDL e DML
-🧩 1. O que é DDL? (Data Definition Language)
+📚 Comandos DDL e DML – Documentação Técnica
+1. O que é DDL? (Data Definition Language)
 
-A DDL é a linguagem de definição de dados utilizada para criar, modificar e excluir estruturas dentro de um banco de dados.
-Com ela, é possível criar bancos, tabelas e definir seus atributos (colunas).
+A DDL é um conjunto de comandos SQL responsável por definir e gerenciar a estrutura de um banco de dados, permitindo criar, alterar ou remover tabelas e outros objetos.
 
-✔ Principais comandos DDL
-Comando    Função
-CREATE    Cria bancos, tabelas e outros objetos
-ALTER    Altera a estrutura de uma tabela já existente
-DROP    Exclui bancos ou tabelas
-TRUNCATE    Apaga rapidamente todos os registros de uma tabela
-
-🏗️ Exemplos DDL utilizados no projeto SweetStore
-
-1️⃣ Criando o banco de dados (CREATE DATABASE)
+Principais comandos DDL
+Comando	Função
+CREATE	Cria bancos de dados, tabelas, índices e outros objetos
+ALTER	Modifica a estrutura de uma tabela existente
+DROP	Remove objetos do banco (tabelas, bancos, etc.)
+TRUNCATE	Remove rapidamente todos os registros de uma tabela (sem apagar a estrutura)
+Exemplos DDL utilizados no projeto SweetStore
+1. Criando o banco de dados
 CREATE DATABASE SweetStore;
 USE SweetStore;
 
-Esse comando cria o banco onde todas as tabelas e dados serão armazenados.
-
-2️⃣ Criando tabelas (CREATE TABLE)
-Exemplo: Tabela Categorias
+2. Criando tabelas
+Tabela Categorias
 CREATE TABLE Categorias (
     CategoriaID INT AUTO_INCREMENT PRIMARY KEY,
     NomeCategoria VARCHAR(100) NOT NULL
 );
 
-Esse comando cria uma tabela para armazenar os tipos de doces vendidos.
-
-Exemplo: Tabela Produtos
+Tabela Produtos
 CREATE TABLE Produtos (
     ProdutoID INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(150) NOT NULL,
@@ -97,86 +90,59 @@ CREATE TABLE Produtos (
     FOREIGN KEY (CategoriaID) REFERENCES Categorias(CategoriaID)
 );
 
-
-Aqui vemos o FOREIGN KEY, que liga produtos à categoria correspondente.
-
-3️⃣ Alterando uma tabela (ALTER TABLE)
-
-(Exemplo didático — não está no script original)
-
+3. Alterando uma tabela
 ALTER TABLE Produtos
 ADD Peso VARCHAR(20);
 
-
-Esse comando adicionaria uma nova coluna chamada "Peso" na tabela Produtos.
-
-4️⃣ Excluindo uma tabela (DROP TABLE)
-
-(Exemplo educacional)
-
+4. Excluindo uma tabela
 DROP TABLE ItensVenda;
 
+2. O que é DML? (Data Manipulation Language)
 
-Remove completamente a tabela e seus dados.
+A DML é responsável por manipular os dados existentes nas tabelas. Ela permite inserir, atualizar, consultar e excluir registros.
 
-🍬 2. O que é DML? (Data Manipulation Language)
-
-A DML é a linguagem usada para manipular os dados dentro das tabelas já criadas.
-Ou seja, são comandos que inserem, atualizam, removem ou consultam informações.
-
-✔ Principais comandos DML
-Comando    Função
-INSERT    Insere novos dados
-UPDATE    Atualiza valores existentes
-DELETE    Remove registros
-SELECT    Consulta e exibe dados
-🍭 Exemplos DML usados no projeto SweetStore
-1️⃣ Inserindo dados (INSERT INTO)
-Inserindo categorias:
+Principais comandos DML
+Comando	Função
+INSERT	Insere novos registros
+UPDATE	Atualiza registros existentes
+DELETE	Remove registros
+SELECT	Consulta dados
+Exemplos DML utilizados no projeto SweetStore
+1. Inserindo dados
+Categorias
 INSERT INTO Categorias (NomeCategoria)
-VALUES ('Chocolates'), ('Balas'), ('Pirulitos'), ('Doces Gourmet');
+VALUES
+('Chocolates'),
+('Balas'),
+('Pirulitos'),
+('Doces Gourmet');
 
-Inserindo produtos:
+Produtos
 INSERT INTO Produtos (Nome, CategoriaID, Preco, QuantidadeEstoque, Descricao)
 VALUES
 ('Chocolate ao Leite 100g', 1, 7.50, 50, 'Chocolate cremoso.'),
 ('Bala de Morango', 2, 0.25, 500, 'Bala tradicional sabor morango.');
 
-2️⃣ Atualizando informações (UPDATE)
-
-(Exemplo educacional)
-
+2. Atualizando dados
 UPDATE Produtos
 SET Preco = 8.00
 WHERE ProdutoID = 1;
 
-
-Esse comando altera o preço do produto com ID 1.
-
-3️⃣ Excluindo dados (DELETE)
-
-(Exemplo educacional)
-
+3. Excluindo dados
 DELETE FROM Produtos
 WHERE ProdutoID = 2;
 
-Remove o produto de ID 2 da tabela.
-
-4️⃣ Consultando dados (SELECT)
-
-(Exemplo prático)
-
+4. Consultando dados
 SELECT Nome, Preco
 FROM Produtos;
 
-Esse comando lista o nome e o preço de todos os produtos cadastrados.
+📌 Resumo Final
 
-🎓 Resumo Final
+DDL → Cria e organiza a estrutura do banco de dados (tabelas, colunas, relacionamentos).
 
-DDL cria e organiza a estrutura do banco (tabelas, campos, relacionamentos).
+DML → Manipula os dados armazenados nessas estruturas.
 
-DML manipula os dados que estão dentro dessa estrutura.
-
-No projeto SweetStore, usamos CREATE TABLE, INSERT, FOREIGN KEY, entre outros.
+No projeto SweetStore, utilizamos comandos essenciais como
+CREATE TABLE, INSERT, FOREIGN KEY, UPDATE, SELECT, entre outros.
 
 Saber ambos é essencial para construir bancos de dados profissionais
