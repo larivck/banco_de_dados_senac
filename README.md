@@ -24,8 +24,11 @@ Organizar um repositório profissional seguindo boas práticas com GitHub
 Durante o desenvolvimento do projeto, pude aprender e praticar:
 
 ✔ Como estruturar um banco de dados real
+
 ✔ Como criar e manipular dados utilizando SQL
+
 ✔ Como representar visualmente o banco por meio de MER/DER
+
 ✔ Como organizar um projeto no GitHub de forma clara e profissional
 
 ---
@@ -57,7 +60,7 @@ Este projeto foi desenvolvido como parte da disciplina de Banco de Dados, com fo
 ---
 
 📚 Comandos DDL e DML – Documentação Técnica
-1. O que é DDL? (Data Definition Language)
+✔ O que é DDL? (Data Definition Language)
 
 A DDL é um conjunto de comandos SQL responsável por definir e gerenciar a estrutura de um banco de dados, permitindo criar, alterar ou remover tabelas e outros objetos.
 
@@ -70,16 +73,20 @@ Principais comandos DDL
 | **TRUNCATE** | Remove rapidamente todos os registros de uma tabela (sem apagar a estrutura) |
 
 Exemplos DDL utilizados no projeto SweetStore
-1. Criando o banco de dados
+✔ Criando o banco de dados
+
 CREATE DATABASE SweetStore;
+
+✔ Selecionando o banco para uso
 USE SweetStore;
 
-2. Criando tabelas
+✔ Criando tabelas
 CREATE TABLE Categorias (
     CategoriaID INT AUTO_INCREMENT PRIMARY KEY,
     NomeCategoria VARCHAR(100) NOT NULL
 );
-Tabela Produtos
+
+# Tabela Produtos
 CREATE TABLE Produtos (
     ProdutoID INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(150) NOT NULL,
@@ -89,16 +96,20 @@ CREATE TABLE Produtos (
     Descricao VARCHAR(255),
     FOREIGN KEY (CategoriaID) REFERENCES Categorias(CategoriaID)
 );
-3. Alterando uma tabela
+
+✔Alterando uma tabela
+
 ALTER TABLE Produtos
+
 ADD Peso VARCHAR(20);
 
-4. Excluindo uma tabela
+✔ Excluindo uma tabela
+
 DROP TABLE ItensVenda;
 
 ---
 
-2. O que é DML? (Data Manipulation Language)
+✔ O que é DML? (Data Manipulation Language)
 A DML é responsável por manipular os dados existentes nas tabelas. Ela permite inserir, atualizar, consultar e excluir registros.
 Principais comandos DML
 
@@ -111,7 +122,7 @@ Principais comandos DML
 
 
 Exemplos DML utilizados no projeto SweetStore
-1. Inserindo dados
+✔ Inserindo dados
 Categorias
 INSERT INTO Categorias (NomeCategoria)
 VALUES
@@ -125,16 +136,19 @@ VALUES
 ('Chocolate ao Leite 100g', 1, 7.50, 50, 'Chocolate cremoso.'),
 ('Bala de Morango', 2, 0.25, 500, 'Bala tradicional sabor morango.');
 
-2. Atualizando dados
+✔ Atualizando dados
+
 UPDATE Produtos
 SET Preco = 8.00
 WHERE ProdutoID = 1;
 
-3. Excluindo dados
+✔ Excluindo dados
+
 DELETE FROM Produtos
 WHERE ProdutoID = 2;
 
-4. Consultando dados
+✔ Consultando dados
+
 SELECT Nome, Preco
 FROM Produtos;
 
