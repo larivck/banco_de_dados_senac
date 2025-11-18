@@ -86,8 +86,10 @@ USE SweetStore;
 ✔ Criando tabelas
 
 CREATE TABLE Categorias (
-    CategoriaID INT AUTO_INCREMENT PRIMARY KEY,
-    NomeCategoria VARCHAR(100) NOT NULL
+
+CategoriaID INT AUTO_INCREMENT PRIMARY KEY,
+    
+NomeCategoria VARCHAR(100) NOT NULL
 );
 
 # Tabela Produtos
