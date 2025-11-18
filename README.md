@@ -103,6 +103,7 @@ DROP TABLE ItensVenda;
 2. O que é DML? (Data Manipulation Language)
 A DML é responsável por manipular os dados existentes nas tabelas. Ela permite inserir, atualizar, consultar e excluir registros.
 Principais comandos DML
+
 | Comando    | Função                        |
 | ---------- | ----------------------------- |
 | **INSERT** | Insere novos registros        |
@@ -110,7 +111,7 @@ Principais comandos DML
 | **DELETE** | Remove registros              |
 | **SELECT** | Consulta dados                |
 
----
+
 
 Exemplos DML utilizados no projeto SweetStore
 1. Inserindo dados
