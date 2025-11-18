@@ -2,6 +2,7 @@
 
 Este repositório apresenta o desenvolvimento completo do projeto da disciplina de Banco de Dados do Senac.
 O objetivo foi criar, modelar e implementar um banco de dados para uma loja de doces fictícia chamada SweetStore, utilizando comandos DDL e DML, além de aplicar conceitos essenciais de modelagem.
+---
 
 🎯 Objetivos do Projeto
 
@@ -14,6 +15,7 @@ Inserir e manipular dados utilizando DML (Data Manipulation Language)
 Compreender e implementar relacionamentos entre entidades
 
 Organizar um repositório profissional seguindo boas práticas com GitHub
+---
 
 📚 Principais Aprendizados
 
