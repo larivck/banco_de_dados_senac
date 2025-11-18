@@ -80,16 +80,20 @@ Exemplos DDL utilizados no projeto SweetStore
 CREATE DATABASE SweetStore;
 
 ✔ Selecionando o banco para uso
+
 USE SweetStore;
 
 ✔ Criando tabelas
+
 CREATE TABLE Categorias (
     CategoriaID INT AUTO_INCREMENT PRIMARY KEY,
     NomeCategoria VARCHAR(100) NOT NULL
 );
 
 # Tabela Produtos
-CREATE TABLE Produtos (
+
+CREATE TABLE Produtos
+(
     ProdutoID INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(150) NOT NULL,
     CategoriaID INT,
