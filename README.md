@@ -98,8 +98,6 @@ ADD Peso VARCHAR(20);
 4. Excluindo uma tabela
 DROP TABLE ItensVenda;
 
----
-
 2. O que é DML? (Data Manipulation Language)
 A DML é responsável por manipular os dados existentes nas tabelas. Ela permite inserir, atualizar, consultar e excluir registros.
 Principais comandos DML
@@ -110,7 +108,6 @@ Principais comandos DML
 | **UPDATE** | Atualiza registros existentes |
 | **DELETE** | Remove registros              |
 | **SELECT** | Consulta dados                |
-
 
 
 Exemplos DML utilizados no projeto SweetStore
@@ -128,26 +125,18 @@ VALUES
 ('Chocolate ao Leite 100g', 1, 7.50, 50, 'Chocolate cremoso.'),
 ('Bala de Morango', 2, 0.25, 500, 'Bala tradicional sabor morango.');
 
----
-
 2. Atualizando dados
 UPDATE Produtos
 SET Preco = 8.00
 WHERE ProdutoID = 1;
 
----
-
 3. Excluindo dados
 DELETE FROM Produtos
 WHERE ProdutoID = 2;
 
----
-
 4. Consultando dados
 SELECT Nome, Preco
 FROM Produtos;
-
----
 
 📌 Resumo Final
 
