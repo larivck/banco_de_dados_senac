@@ -94,15 +94,21 @@ NomeCategoria VARCHAR(100) NOT NULL
 
 # Tabela Produtos
 
-CREATE TABLE Produtos
+✔ CREATE TABLE Produtos
 (
-    ProdutoID INT AUTO_INCREMENT PRIMARY KEY,
-    Nome VARCHAR(150) NOT NULL,
-    CategoriaID INT,
-    Preco DECIMAL(10,2) NOT NULL,
-    QuantidadeEstoque INT NOT NULL,
-    Descricao VARCHAR(255),
-    FOREIGN KEY (CategoriaID) REFERENCES Categorias(CategoriaID)
+ProdutoID INT AUTO_INCREMENT PRIMARY KEY,
+    
+Nome VARCHAR(150) NOT NULL,
+    
+CategoriaID INT,
+    
+Preco DECIMAL(10,2) NOT NULL,
+    
+QuantidadeEstoque INT NOT NULL,
+    
+Descricao VARCHAR(255),
+    
+FOREIGN KEY (CategoriaID) REFERENCES Categorias(CategoriaID)
 );
 
 ✔Alterando uma tabela
