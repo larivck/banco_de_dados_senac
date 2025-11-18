@@ -32,7 +32,7 @@ Durante o desenvolvimento do projeto, pude aprender e praticar:
 
 ▶️ Como Executar o Script SQL
 
-Para executar o arquivo sweet_store.sql, siga estas etapas:
+Para executar o arquivo sweet_store.sql
 
 Abra seu editor SQL preferido (MySQL Workbench, DBeaver, phpMyAdmin etc.)
 
