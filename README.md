@@ -60,6 +60,7 @@ Este projeto foi desenvolvido como parte da disciplina de Banco de Dados, com fo
 ---
 
 📚 Comandos DDL e DML – Documentação Técnica
+
 ✔ O que é DDL? (Data Definition Language)
 
 A DDL é um conjunto de comandos SQL responsável por definir e gerenciar a estrutura de um banco de dados, permitindo criar, alterar ou remover tabelas e outros objetos.
@@ -73,6 +74,7 @@ Principais comandos DDL
 | **TRUNCATE** | Remove rapidamente todos os registros de uma tabela (sem apagar a estrutura) |
 
 Exemplos DDL utilizados no projeto SweetStore
+
 ✔ Criando o banco de dados
 
 CREATE DATABASE SweetStore;
@@ -122,18 +124,27 @@ Principais comandos DML
 
 
 Exemplos DML utilizados no projeto SweetStore
+
 ✔ Inserindo dados
+
 Categorias
+
 INSERT INTO Categorias (NomeCategoria)
+
 VALUES
 ('Chocolates'),
+
 ('Balas'),
+
 ('Pirulitos'),
+
 ('Doces Gourmet');
 
 INSERT INTO Produtos (Nome, CategoriaID, Preco, QuantidadeEstoque, Descricao)
 VALUES
+
 ('Chocolate ao Leite 100g', 1, 7.50, 50, 'Chocolate cremoso.'),
+
 ('Bala de Morango', 2, 0.25, 500, 'Bala tradicional sabor morango.');
 
 ✔ Atualizando dados
