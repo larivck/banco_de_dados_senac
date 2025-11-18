@@ -79,7 +79,6 @@ CREATE TABLE Categorias (
     CategoriaID INT AUTO_INCREMENT PRIMARY KEY,
     NomeCategoria VARCHAR(100) NOT NULL
 );
-
 Tabela Produtos
 CREATE TABLE Produtos (
     ProdutoID INT AUTO_INCREMENT PRIMARY KEY,
@@ -90,13 +89,14 @@ CREATE TABLE Produtos (
     Descricao VARCHAR(255),
     FOREIGN KEY (CategoriaID) REFERENCES Categorias(CategoriaID)
 );
-
 3. Alterando uma tabela
 ALTER TABLE Produtos
 ADD Peso VARCHAR(20);
 
 4. Excluindo uma tabela
 DROP TABLE ItensVenda;
+
+---
 
 2. O que é DML? (Data Manipulation Language)
 A DML é responsável por manipular os dados existentes nas tabelas. Ela permite inserir, atualizar, consultar e excluir registros.
